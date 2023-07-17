@@ -7,13 +7,12 @@
 }
 
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins';
     font-display: swap;
     box-sizing: border-box;
 }
 
 body {
-    font-size: 1.6rem;
     background-color: $subtleBg;
     color: $defaultFont;
     -webkit-font-smoothing: antialiased;
@@ -54,12 +53,155 @@ h2 {
         text-align: center;
     }
 }
+.fadeLoad{
+    // opacity: 0 !important;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
 
 .full-sized {
-    height: 100vh;
+    // height: calc(100vh - 60px);
     width: 100%;
+    
+    &.slide1{
+        background: url(/images/baner_bg.png);
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-attachment: fixed;
+        background-position: -65px 400px;
+    }
 
-    img {
-        max-width: 200px;
+    .images {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 70px;
+        vertical-align: bottom;
+        background: url(images/Seal_of_karnataka.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: 102px;
+        background-position-y: 70%;
+
+        .cm_image,
+        .dep_cm_image {
+            vertical-align: bottom;
+            position: relative;
+
+            .surname {
+                text-align: center;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                font-family: 'Poppins';
+                letter-spacing: 0px;
+                color: #222;
+                opacity: 1;
+            }
+
+            .desig {
+                text-align: center;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                font-family: 'Poppins';
+                letter-spacing: 0px;
+                color: #222;
+            }
+
+            img {
+                bottom: 0;
+                width: 197px;
+            }
+        }
+
+        .cm_image {
+            float: left;
+        }
+
+        .dep_cm_image {
+            float: right;
+        }
+
+        .kgfLogo {
+            position: relative;
+
+            img {
+                position: absolute;
+                bottom: 0;
+            }
+
+        }
+    }
+
+    .bottomBaner {
+        width: 1419px;
+        height: 378px;
+
+        background: transparent url('images/bottomBaner.png') 0% 100% no-repeat padding-box;
+        mix-blend-mode: soft-light;
+        opacity: 1;
+        background-size: contain;
+        margin-bottom: 50px;
+    }
+
+    .headTitle {
+        text-align: left;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        font-size: 112px;
+        line-height: 168px;
+        font-family: 'Poppins';
+        letter-spacing: 0px;
+        color: #222;
+        opacity: 1;
+        height: 157px;
+        margin-top: -50px;
+    }
+
+    .subTitle {
+        text-align: left;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 45px;
+        font-family: 'Poppins';
+        letter-spacing: 0px;
+        color: #222;
+        opacity: 1;
+
+    }
+}
+
+.section2 {
+    .title{
+        text-align: center;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 48px;
+        font-family: 'Poppins';
+        letter-spacing: 0px;
+        color: #222;
+        text-transform: capitalize;
+        opacity: 1;
     }
 }

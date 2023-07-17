@@ -1,0 +1,7 @@
+@media screen and (min-height: 860px) {
+    .full-sized {
+        .bottomBaner {
+            margin-top: calc(100vh - 860px);
+        }
+    }
+}
